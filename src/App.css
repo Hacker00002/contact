@@ -1,0 +1,66 @@
+.name {
+  position: relative;
+}
+
+.icons {
+  position: absolute;
+  z-index: 1000;
+  color: #fff;
+  font-size: 25px;
+  top: 25px;
+  left: 10px;
+}
+
+.father {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  width: 450px;
+  border-radius: 20px;
+  box-shadow: 0 0 4px 15px rgb(255, 255, 255);
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
+input {
+  border: none;
+  width: 400px;
+  padding: 30px 50px;
+  border-radius: 13px;
+  font-size: 16px;
+  color: #fff !important;
+  background: rgb(0, 212, 255);
+  background: linear-gradient(
+    90deg,
+    rgba(0, 212, 255, 1) 0%,
+    rgba(92, 0, 198, 0.662) 100%
+  );
+  box-shadow: 0 0 15px 5px rgba(0, 213, 255, 0.5);
+}
+
+input::placeholder {
+  color: rgba(255, 255, 255, 0.622);
+}
+
+.allContentFather {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  margin-top: 100px;
+}
+
+button {
+  border: none;
+  border-radius: 13px;
+  background-color: #fff;
+  padding: 15px;
+  box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.14);
+  cursor: pointer;
+}
