@@ -1,22 +1,22 @@
 import "./Cards.css";
 
-const Cards = () => {
+const Cards = (props) => {
   return (
     <div className="cardsFather">
-      <div className="card">
-        <div className="cardImg">
-          <img
-            src="https://picsum.photos/id/1/100/100"
-            alt=""
-            className="imgCard"
-          />
-          <div className="cardText">
-            <h3 className="nameCard">Jon Dou</h3>
-            <p className="relationCard">Parent</p>
-            <p className="telCard">(+998) 99844-56-64</p>
+      {props.contact.map((elem) => {
+        return (
+          <div onClick={() => props.deleteContacts(elem.id)} className="card">
+            <div className="cardImg">
+              <img src={elem.img} alt="" className="imgCard" />
+              <div className="cardText">
+                <h3 className="nameCard">{elem.name}</h3>
+                <p className="relationCard">{elem.relation}</p>
+                <p className="telCard">(+998){elem.tel}</p>
+              </div>
+            </div>
           </div>
-        </div>
-      </div>
+        );
+      })}
     </div>
   );
 };

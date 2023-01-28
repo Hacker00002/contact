@@ -5,7 +5,7 @@ import Shokhjahon from "./assets/img/5377597198793032607_121.jpg";
 import Muhammadqodir from "./assets/img/5233741521231134382_99.jpg";
 import Elbek from "./assets/img/5242288622114293870_99.jpg";
 
-function App() {
+function App(props) {
   const [name, setName] = useState("");
   const [relation, setRelation] = useState("");
   const [tel, setTel] = useState("");
@@ -116,26 +116,11 @@ function App() {
             </form>
           </div>
           {/* add */}
-          <div className="cardsFather">
-            {contact.map((elem) => {
-              return (
-                <div
-                  key={elem.id}
-                  onClick={() => deleteContactHandler(elem.id)}
-                  className="card"
-                >
-                  <div className="cardImg">
-                    <img src={elem.img} alt="" className="imgCard" />
-                    <div className="cardText">
-                      <h3 className="nameCard">{elem.name}</h3>
-                      <p className="relationCard">{elem.relation}</p>
-                      <p className="telCard">(+998){elem.tel}</p>
-                    </div>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
+          <Cards
+            deleteContacts={deleteContactHandler}
+            key={contact.id}
+            contact={contact}
+          />
         </div>
       </div>
     </div>
